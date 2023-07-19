@@ -9,7 +9,7 @@ const isDevelopment = process.env.NODE_ENV !== 'production'
 
 const frontendDirectory = 'uniot_icp_sandbox_frontend'
 
-const frontend_entry = path.join('src', frontendDirectory, 'src', 'index.html')
+const frontendEntry = path.join('src', frontendDirectory, 'src', 'index.html')
 
 module.exports = {
   target: 'web',
@@ -17,7 +17,7 @@ module.exports = {
   entry: {
     // The frontend.entrypoint points to the HTML file for this build, so we need
     // to replace the extension to `.js`.
-    index: path.join(__dirname, frontend_entry).replace(/\.html$/, '.js')
+    index: path.join(__dirname, frontendEntry).replace(/\.html$/, '.js')
   },
   devtool: isDevelopment ? 'source-map' : false,
   optimization: {
@@ -52,7 +52,7 @@ module.exports = {
   // },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, frontend_entry),
+      template: path.join(__dirname, frontendEntry),
       cache: false
     }),
     new webpack.EnvironmentPlugin([
