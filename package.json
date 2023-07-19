@@ -1,9 +1,10 @@
 {
   "name": "uniot_icp_sandbox_frontend",
   "version": "0.2.0",
-  "description": "Internet Computer starter application",
+  "description": "Internet Computer Uniot Sandbox",
   "keywords": [
     "Internet Computer",
+    "Uniot",
     "Motoko",
     "JavaScript",
     "Canister"
